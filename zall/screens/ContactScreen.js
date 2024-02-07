@@ -24,7 +24,7 @@ export function ContactScreen({ navigation,route }) {
     },[route.params?.editName,route.params?.editSurname,route.params?.editEmail,route.params?.editPhone])
   
     const getContact = () => {
-      fetch("https://randomuser.me/api/?results=5",{
+      fetch("https://randomuser.me/api/?results=50",{
         method:"GET",
         headers: {
           'Content-Type': 'application/json'
@@ -107,9 +107,9 @@ export function ContactScreen({ navigation,route }) {
               })}
             </View>
             <View>
-            <Button title="Adicionar" onPress={() => navigation.navigate('Adicionar')}/>
             </View>
             </ScrollView>
+            <Button title="Adicionar" onPress={() => navigation.navigate('Adicionar')}/>
         </SafeAreaView>
     );
   }
